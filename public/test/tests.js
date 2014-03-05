@@ -39,17 +39,17 @@ describe('CSV generator', function() {
 
     beforeEach(function() {
     document.getElementById('INPUT').value = contestData.question1;
-	calculate();
+	main();
 	converted1 = document.createElement("div");
 	converted1.innerHTML = document.getElementById('result').innerHTML;
 	//------------
 	document.getElementById('INPUT').value = contestData.question2;
-	calculate();
+	main();
 	converted2 = document.createElement("div");
 	converted2.innerHTML = document.getElementById('result').innerHTML;
 	//------------
 	document.getElementById('INPUT').value = contestData.question3;
-	calculate();
+	main();
 	converted3 = document.createElement("div");
 	converted3.innerHTML = document.getElementById('result').innerHTML;
     });
