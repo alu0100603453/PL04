@@ -9,18 +9,18 @@ html *
 #INPUT 
 {
     border: none; 
-    color: black;
+
     font-family: monospace;
     height: 1in;
     overflow: auto;
     /* padding: 0.5em; */
     width: 80%;
-    background-color: #66FFCC; 
+
 }
-body { background-color: #99FFFF; }
+body {  }
 #OUTPUT 
 {
-    background-color: #66FFCC; 
+
     width: 80%;
 }
 
@@ -30,13 +30,13 @@ a {
   text-decoration:none;
 }
 
-a:link { color:#00FFFF; }
-a:visited { color:black; }
+a:link { }
+a:visited { }
 a:hover{ 
-  background-color:black; 
-  color: #FFF;
+
+
 }
-a:active {color:#0000FF;}  /* selected link */
+a:active {}  /* selected link */
 
 
 
@@ -51,10 +51,10 @@ nav li {
 }
 
 .mylink {
-  background-color: #66FFCC;
+
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
-  border: 5px solid #009900;
+
   padding: 5px;
 }
 
