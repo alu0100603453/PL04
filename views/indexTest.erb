@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="mocha.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<style>
+	#fixture {
+		position: absolute;
+		top: -9999;
+		left: -9999;
+	};
+</style>
+<script src="test-lib/chai.js"></script>
+<script src="test-lib/mocha.js"></script>
+<script> mocha.setup('bdd');</script>
+<script src="utils.js"></script>
+<script src="tests.js"></script>
+<script>
+	window.onload = function() {
+		mocha.run()
+	};
+</script>
+
+<textarea autofocus id="INPUT"></textarea>
+<div id='result'></div>
+<div id="mocha"></div>
