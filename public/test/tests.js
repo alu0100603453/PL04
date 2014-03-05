@@ -54,15 +54,15 @@ describe('CSV generator', function() {
 	converted3.innerHTML = document.getElementById('result').innerHTML;
     });
     
-    it('Tabla simple sin errores: juan, alberto , maria , "Manolo,s",luz ', function() {
+    it('var a = "hello"; // initialize a     var b = function(x) {            var c = 3;               return x+c;};', function() {
 	expect(converted1.innerHTML).to.equal(contestData.answer1);
 	document.getElementById('test_output1').innerHTML=safe_tags_replace(contestData.answer1);
     });
-    it('Tabla con campos en blancos: juan, alberto , , "Manolo,s",luz', function() {
+    it('var a = "hello"; // initialize a     var b = function(x) {            var c = 3;               return x+c;             };', function() {
 	expect(converted2.innerHTML).to.equal(contestData.answer2);
 	document.getElementById('test_output2').innerHTML=safe_tags_replace(contestData.answer2);
     });
-    it('Tabla con exeso de campos: juan, alberto , maria ,\\n "Manolo,s",luz', function() {
+    it('var a = "hello"; // initialize a     var b = function(x) {            var c = 3;               return x+c;             };', function() {
 	expect(converted3.innerHTML).to.equal(contestData.answer3);
 	document.getElementById('test_output3').innerHTML=safe_tags_replace(contestData.answer3);
     });
