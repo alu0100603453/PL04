@@ -20,9 +20,9 @@ describe('CSV generator', function() {
     var ourQuiz, form;
     var contestData = {
         question1: 'var a = "hello"; // initialize a     var b = function(x) {            var c = 3;               return x+c;             };',
-        answer1: '{ "value": "=", "arity": "binary", "first": { "value": "a", "arity": "name" }, "second": { "value": "hello", "arity": "literal" } }',
+        answer1: '{\n    "value": "=",\n    "arity": "binary",\n    "first": {\n        "value": "a",\n        "arity": "name"\n    },\n    "second": {\n        "value": "hello",\n        "arity": "literal"\n    }\n}',
         question2: 'var a = "hello"; // initialize a     var b = "GoodBye";     var c = function(x) {             var d = 3;               return x+d;             };     var e = function(x) {             var f = 5;               return x-f;             };',
-        answer2: 'res',
+        answer2: '{\n    "value": "=",\n    "arity": "binary",\n    "first": {\n        "value": "a",\n        "arity": "name"\n    },\n    "second": {\n        "value": "hello",\n        "arity": "literal"\n    }\n}',
         question3: 'var a/&#@:_;!|! = "hello";',
         answer3: '"Syntax error near \'#@:_;!|! = \\"hello\\";\'"',
         
