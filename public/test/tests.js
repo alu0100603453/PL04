@@ -20,11 +20,11 @@ describe('CSV generator', function() {
     var ourQuiz, form;
     var contestData = {
         question1: 'var a = "hello"; // initialize a     var b = function(x) {            var c = 3;               return x+c;             };',
-        answer1: 'res',
+        answer1: '{ "value": "=", "arity": "binary", "first": { "value": "a", "arity": "name" }, "second": { "value": "hello", "arity": "literal" } }',
         question2: 'var a = "hello"; // initialize a     var b = "GoodBye";     var c = function(x) {             var d = 3;               return x+d;             };     var e = function(x) {             var f = 5;               return x-f;             };',
         answer2: 'res',
-        question3: '	var a/&#@:_;!|! = "hello";',
-        answer3: 'res',
+        question3: 'var a/&#@:_;!|! = "hello";',
+        answer3: '"Syntax error near \'#@:_;!|! = \\"hello\\";\'"',
         
     };
 
@@ -41,17 +41,17 @@ describe('CSV generator', function() {
     document.getElementById('INPUT').value = contestData.question1;
 	main();
 	converted1 = document.createElement("div");
-	converted1.innerHTML = document.getElementById('result').innerHTML;
+	converted1.innerHTML = document.getElementById('OUTPUT').innerHTML;
 	//------------
 	document.getElementById('INPUT').value = contestData.question2;
 	main();
 	converted2 = document.createElement("div");
-	converted2.innerHTML = document.getElementById('result').innerHTML;
+	converted2.innerHTML = document.getElementById('OUTPUT').innerHTML;
 	//------------
 	document.getElementById('INPUT').value = contestData.question3;
 	main();
 	converted3 = document.createElement("div");
-	converted3.innerHTML = document.getElementById('result').innerHTML;
+	converted3.innerHTML = document.getElementById('OUTPUT').innerHTML;
     });
     
     it('var a = "hello"; // initialize a     var b = function(x) {            var c = 3;               return x+c;};', function() {
@@ -62,7 +62,7 @@ describe('CSV generator', function() {
 	expect(converted2.innerHTML).to.equal(contestData.answer2);
 	document.getElementById('test_output2').innerHTML=safe_tags_replace(contestData.answer2);
     });
-    it('var a = "hello"; // initialize a     var b = function(x) {            var c = 3;               return x+c;             };', function() {
+    it('Variables con errores', function() {
 	expect(converted3.innerHTML).to.equal(contestData.answer3);
 	document.getElementById('test_output3').innerHTML=safe_tags_replace(contestData.answer3);
     });
